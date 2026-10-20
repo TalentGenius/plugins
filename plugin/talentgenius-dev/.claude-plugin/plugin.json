@@ -1,0 +1,13 @@
+{
+	"$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+	"name": "talentgenius-dev",
+	"displayName": "TalentGenius (dev)",
+	"version": "1.6.1",
+	"description": "Work your approved TalentGenius playbooks one task at a time, run their AI steps in place, and keep your progress saved.",
+	"author": {
+		"name": "TalentGenius, Inc.",
+		"url": "https://talentgenius.io"
+	},
+	"homepage": "https://talentgenius.io",
+	"keywords": ["talentgenius", "playbook", "tasks", "workflow", "planning"]
+}

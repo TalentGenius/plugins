@@ -1,0 +1,20 @@
+{
+	"name": "talentgenius-preview",
+	"interface": {
+		"displayName": "TalentGenius (preview)"
+	},
+	"plugins": [
+		{
+			"name": "talentgenius-dev",
+			"source": {
+				"source": "local",
+				"path": "./plugin/talentgenius-dev"
+			},
+			"policy": {
+				"installation": "AVAILABLE",
+				"authentication": "ON_INSTALL"
+			},
+			"category": "Productivity"
+		}
+	]
+}

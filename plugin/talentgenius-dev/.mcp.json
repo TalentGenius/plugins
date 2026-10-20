@@ -1,0 +1,8 @@
+{
+	"mcpServers": {
+		"talentgenius-dev": {
+			"type": "http",
+			"url": "https://mcp-we-dev.talentgenius.dev/mcp"
+		}
+	}
+}
