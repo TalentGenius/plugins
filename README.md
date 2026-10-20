@@ -10,8 +10,10 @@ You need an invited TalentGenius account on the dev server.
 | --- | --- | --- | --- |
 | ChatGPT desktop app | Works | Works | Works |
 | Claude Code (terminal, IDE, desktop Code tab) | Works | Works | Not applicable |
-| claude.ai and the Claude desktop app (chat, Cowork) | Not possible, a chat cannot install plugins | Documented by Anthropic, being tested | Documented by Anthropic, being tested |
-| ChatGPT on the web | Being tested | Being tested | Being tested |
+| claude.ai on the web and the Claude desktop app (chat) | Not possible, a chat cannot install plugins | Works | Works |
+| ChatGPT on the web | Not possible | Not offered, the web page has no Add marketplace | Uploads, but the plugin is desktop-only |
+
+The plugin cannot be installed from ChatGPT's website. Use the ChatGPT desktop app, or Claude.
 
 ## Install by prompt (automated)
 
@@ -45,16 +47,16 @@ Then restart Claude Code or run `/reload-plugins`.
 
 ### Add the marketplace
 
-- **ChatGPT desktop app:** Plugins, Add, Add a marketplace. Type `TalentGenius/tgdev-plugin-d864a3fd2b` in Source and press Add marketplace. Open the Personal tab, find the "TalentGenius (preview)" section and press + on the plugin.
+- **ChatGPT desktop app:** Plugins, Add, Add a marketplace. Type `TalentGenius/tgdev-plugin-d864a3fd2b` in Source and press Add marketplace. Open the Personal tab, find the "TalentGenius (preview)" section and press + on the plugin. If the lists look unchanged, press the refresh button on the Plugins page.
 - **Claude Code:** run `/plugin marketplace add https://github.com/TalentGenius/tgdev-plugin-d864a3fd2b.git`, then `/plugin install talentgenius-dev@talentgenius-preview`.
-- **claude.ai and the Claude desktop app:** Customize, Plugins, Add, Add marketplace. Enter `TalentGenius/tgdev-plugin-d864a3fd2b`, sync, and install the plugin. Then open the plugin's Connectors tab, add or connect the TalentGenius connector and sign in.
+- **claude.ai on the web or the Claude desktop app:** Customize, Plugins, Add, Add marketplace, Add from a repository. Enter `TalentGenius/tgdev-plugin-d864a3fd2b` and press Sync. Leave "Sync automatically" on, so claude.ai keeps the plugin current. Add the plugin from the Discover list, then open its Connectors tab: if the TalentGenius connector is not Connected yet, connect it and sign in.
 
 ### Use the ZIP file
 
-Download [talentgenius-dev.zip](https://github.com/TalentGenius/tgdev-plugin-d864a3fd2b/releases/latest/download/talentgenius-dev.zip). A ZIP copy never updates by itself, so prefer the marketplace when you can.
+Download [talentgenius-dev.zip](https://github.com/TalentGenius/tgdev-plugin-d864a3fd2b/releases/latest/download/talentgenius-dev.zip). A ZIP copy does not update by itself, so prefer the marketplace when you can.
 
 - **ChatGPT desktop app:** Plugins, Add, Upload plugin archive. Choose the ZIP, press Add plugin, then Install plugin.
-- **claude.ai and the Claude desktop app:** Customize, Plugins, Add, Upload plugin. Choose the ZIP, then open the plugin's Connectors tab, connect and sign in.
+- **claude.ai on the web or the Claude desktop app:** Customize, Plugins, Add, Upload plugin. Choose the ZIP, then open the plugin's Connectors tab, connect and sign in.
 
 ## After installing
 
@@ -63,8 +65,9 @@ Sign in to TalentGenius when the app asks. In the ChatGPT desktop app the sign-i
 ## Updates
 
 - **ChatGPT desktop app:** the marketplace updates itself when the app starts. Settings, Integrations, Plugins, Marketplace also has an Upgrade button.
+- **claude.ai:** updates arrive automatically while "Sync automatically" is on, or press Check for updates on the marketplace.
 - **Claude Code:** auto-update is off by default for marketplaces you add. Turn it on under /plugin, Marketplaces, Enable auto-update, or run `/plugin marketplace update talentgenius-preview`.
-- **ZIP copies:** do not update. Delete the plugin and add the marketplace instead.
+- **ZIP copies:** do not update by themselves. In ChatGPT, open the plugin's page on chatgpt.com, choose the ... menu and Upload new version to replace the copy in place. Otherwise remove the ZIP copy and add the marketplace.
 
 ## Remove
 
