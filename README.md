@@ -48,7 +48,7 @@ Set up TalentGenius for me, so I can work my TalentGenius playbooks here. Talent
 2. Sign me in. In the terminal pane, run: "${CLAUDE_CODE_EXECPATH:-claude}" mcp login plugin:talentgenius-dev:talentgenius-dev
    It opens my browser; if it does not, show me the link it prints. Tell me to sign in to TalentGenius and press Allow, then wait until it prints "Authenticated". If it ends with access denied, tell me my email has to be invited to TalentGenius first and stop.
 
-3. Start a new session for me whose first message is "Show me my TalentGenius playbooks" and tell me to open it. If you cannot start one, tell me to open a new session and type that.
+3. Start a new session for me now, not as a suggestion, whose first message is "Show me my TalentGenius playbooks", and tell me to open it. If you cannot start one, tell me to open a new session and type that.
 ```
 
 **Claude Code in a terminal or IDE:** the same prompt works; for step 2 the sign-in command runs in your terminal and opens the browser itself.
