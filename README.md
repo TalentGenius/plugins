@@ -8,18 +8,21 @@ You need an invited TalentGenius account on the dev server.
 
 | App | Prompt (automated) | Marketplace by hand | ZIP file |
 | --- | --- | --- | --- |
-| ChatGPT desktop app | Works | Works | Works |
+| ChatGPT desktop app (Codex mode) | Works | Works | Works |
 | Claude Code (terminal, IDE, desktop Code tab) | Works | Works | Not applicable |
-| claude.ai on the web and the Claude desktop app (chat) | Not possible, a chat cannot install plugins | Works | Works |
-| ChatGPT on the web | Not possible | Not offered, the web page has no Add marketplace | Uploads, but the plugin is desktop-only |
+| Claude Code on the web (claude.ai/code) | Works, but only for that one session | Install on claude.ai instead, Code picks it up | Not applicable |
+| claude.ai on the web and the Claude desktop app (chat) | Not possible, a chat cannot add a marketplace | Works | Works |
+| ChatGPT on the web (Chat and Work) | Not possible, neither mode has a tool that adds a marketplace | Not offered, the Add menu has no Add marketplace entry | Uploads, but the plugin is desktop-only |
 
-The plugin cannot be installed from ChatGPT's website. Use the ChatGPT desktop app, or Claude.
+The plugin cannot be installed from ChatGPT's website, in Chat mode or in Work mode. Use the ChatGPT desktop app, or Claude.
+
+In the ChatGPT desktop app, use Codex mode (the dropdown at the top of the sidebar switches between ChatGPT and Codex). In a check on version 1.6.1, Codex mode saw the skill and the tools, the ChatGPT product's Work mode saw the skill but no tools, and its Chat mode saw neither.
 
 ## Install by prompt (automated)
 
 Paste one of these into the app and let it do the work. It may ask you to approve commands.
 
-**ChatGPT desktop app on a Mac:** start a new chat and paste:
+**ChatGPT desktop app on a Mac:** switch to Codex mode, start a new chat and paste:
 
 ```text
 Install the "TalentGenius (dev)" plugin from our plugin marketplace on GitHub, TalentGenius/tgdev-plugin-d864a3fd2b. Run these two commands, then tell me in plain words whether it worked and what I still need to do to start using it:
@@ -27,7 +30,7 @@ Install the "TalentGenius (dev)" plugin from our plugin marketplace on GitHub, T
 2. /Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex plugin add talentgenius-dev@talentgenius-preview
 ```
 
-**ChatGPT desktop app on any system:** a shorter prompt also worked in testing.
+**ChatGPT desktop app on any system:** in Codex mode, a shorter prompt also worked in testing.
 
 ```text
 Install the TalentGenius (dev) plugin from the plugin marketplace TalentGenius/tgdev-plugin-d864a3fd2b.
@@ -43,13 +46,15 @@ Install the "TalentGenius (dev)" plugin from our plugin marketplace on GitHub. R
 
 Then restart Claude Code or run `/reload-plugins`.
 
+**Claude Code on the web (claude.ai/code):** the one-line prompt also works there, but the install lives only in that session's temporary cloud container and is gone afterwards. To keep the plugin, install it on claude.ai (see below): plugins you install there are copied into your Code sessions automatically. In Code the plugin's TalentGenius connector may ask for its own sign-in.
+
 ## Install by hand
 
 ### Add the marketplace
 
 - **ChatGPT desktop app:** Plugins, Add, Add a marketplace. Type `TalentGenius/tgdev-plugin-d864a3fd2b` in Source and press Add marketplace. Open the Personal tab, find the "TalentGenius (preview)" section and press + on the plugin. If the lists look unchanged, press the refresh button on the Plugins page.
 - **Claude Code:** run `/plugin marketplace add https://github.com/TalentGenius/tgdev-plugin-d864a3fd2b.git`, then `/plugin install talentgenius-dev@talentgenius-preview`.
-- **claude.ai on the web or the Claude desktop app:** Customize, Plugins, Add, Add marketplace, Add from a repository. Enter `TalentGenius/tgdev-plugin-d864a3fd2b` and press Sync. Leave "Sync automatically" on, so claude.ai keeps the plugin current. Add the plugin from the Discover list, then open its Connectors tab: if the TalentGenius connector is not Connected yet, connect it and sign in.
+- **claude.ai on the web or the Claude desktop app:** Customize, Plugins, Add, Add marketplace, Add from a repository. Enter `TalentGenius/tgdev-plugin-d864a3fd2b` and press Sync. Leave "Sync automatically" on, so claude.ai keeps the plugin current. Add the plugin from the Discover list, then open its Connectors tab: if the TalentGenius connector is not Connected yet, connect it and sign in. Claude Code, including the Code tab on the web, picks the plugin up at its next session start.
 
 ### Use the ZIP file
 
@@ -60,7 +65,7 @@ Download [talentgenius-dev.zip](https://github.com/TalentGenius/tgdev-plugin-d86
 
 ## After installing
 
-Sign in to TalentGenius when the app asks. In the ChatGPT desktop app the sign-in button appears under Settings, Integrations, Plugins, MCPs, From plugins (use the plugin in a chat once if the entry is not there yet). Then start a new chat and ask "What is my next TalentGenius task?".
+Sign in to TalentGenius when the app asks. In the ChatGPT desktop app the sign-in button appears under Settings, Integrations, Plugins, MCPs, From plugins (use the plugin in a chat once if the entry is not there yet). Then start a new chat (in Codex mode in the ChatGPT desktop app) and ask "What is my next TalentGenius task?".
 
 ## Updates
 
