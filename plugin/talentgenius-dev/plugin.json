@@ -1,7 +1,7 @@
 {
 	"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
 	"name": "talentgenius-dev",
-	"version": "1.6.1",
+	"version": "1.6.3",
 	"description": "Work your approved TalentGenius playbooks one task at a time, run their AI steps in place, and keep your progress saved.",
 	"author": {
 		"name": "TalentGenius, Inc.",
