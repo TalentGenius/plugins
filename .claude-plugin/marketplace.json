@@ -1,15 +1,25 @@
 {
 	"name": "talentgenius-preview",
-	"description": "TalentGenius plugins, published by TalentGenius, Inc. Dev tier for invited testers.",
+	"description": "TalentGenius plugins, published by TalentGenius, Inc. Production, plus the dev and test tiers for invited testers.",
 	"owner": {
 		"name": "TalentGenius",
 		"url": "https://talentgenius.io"
 	},
 	"plugins": [
 		{
+			"name": "talentgenius",
+			"source": "./plugin/talentgenius",
+			"description": "Work your approved TalentGenius playbooks one task at a time, run their AI steps in place, and keep your progress saved."
+		},
+		{
 			"name": "talentgenius-dev",
 			"source": "./plugin/talentgenius-dev",
 			"description": "Work your approved TalentGenius playbooks one task at a time, run their AI steps in place, and keep your progress saved. Development tier."
+		},
+		{
+			"name": "talentgenius-test",
+			"source": "./plugin/talentgenius-test",
+			"description": "Work your approved TalentGenius playbooks one task at a time, run their AI steps in place, and keep your progress saved. Test tier."
 		}
 	]
 }

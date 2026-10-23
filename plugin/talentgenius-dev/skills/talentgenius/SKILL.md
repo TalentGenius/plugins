@@ -1,6 +1,6 @@
 ---
 name: talentgenius
-description: Use when the user wants to work, continue, resume, or be walked through a TalentGenius (TG) playbook, asks what their next task is, says "next" or "move on" while working one, asks about their TalentGenius or TG playbooks, or asks for a document, survey, form, order form or file that TalentGenius or TG holds in its library or as a playbook attachment.
+description: Use when the user asks to connect to TalentGenius or to their TalentGenius or TG playbooks, wants to work, continue, resume, or be walked through a TalentGenius (TG) playbook, asks what their next task is, says "next" or "move on" while working one, asks about their TalentGenius or TG playbooks, or asks for a document, survey, form, order form or file that TalentGenius or TG holds in its library or as a playbook attachment.
 ---
 
 # TalentGenius
