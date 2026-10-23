@@ -1,0 +1,35 @@
+{
+	"name": "talentgenius",
+	"version": "1.6.4",
+	"description": "Work your approved TalentGenius playbooks one task at a time, run their AI steps in place, and keep your progress saved.",
+	"author": {
+		"name": "TalentGenius, Inc.",
+		"url": "https://talentgenius.io"
+	},
+	"homepage": "https://talentgenius.io",
+	"keywords": ["talentgenius", "playbook", "tasks", "workflow", "planning"],
+	"skills": "./skills/",
+	"mcpServers": "./.mcp.json",
+	"interface": {
+		"displayName": "TalentGenius",
+		"shortDescription": "Work your playbooks with AI",
+		"longDescription": "TalentGenius turns a goal into a playbook: a plan of tasks, each with steps for you, for AI, or for a sign-off. This plugin lets TalentGenius customers work the playbooks they already have, one task at a time. It shows where you are, who does each step, and the approved prompt for each AI step, runs that prompt only when you say yes, reads the documents a task depends on, and saves your progress so you can pick up later. It works only with your own TalentGenius account and playbooks. It does not create or delete playbooks; new playbooks are created at app.talentgenius.io. Accounts are invite-only at launch.",
+		"developerName": "TalentGenius, Inc.",
+		"category": "Productivity",
+		"capabilities": ["Read", "Write"],
+		"websiteURL": "https://talentgenius.io",
+		"supportURL": "https://talentgenius.io/contact",
+		"privacyPolicyURL": "https://talentgenius.io/legal/privacy-policy",
+		"termsOfServiceURL": "https://talentgenius.io/legal/terms-conditions",
+		"defaultPrompt": [
+			"Connect to my TalentGenius playbooks.",
+			"What is my next TalentGenius task?",
+			"Show me my TalentGenius playbooks."
+		],
+		"brandColor": "#6741FF",
+		"composerIcon": "./assets/icon.png",
+		"composerIconDark": "./assets/icon-dark.png",
+		"logo": "./assets/icon.png",
+		"logoDark": "./assets/icon-dark.png"
+	}
+}

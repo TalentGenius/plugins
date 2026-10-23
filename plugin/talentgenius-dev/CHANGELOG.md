@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.4 - 2026-10-23
+
+- The first starter prompt is now "Connect to my TalentGenius playbooks.", replacing "Help me continue my TalentGenius playbook, one step at a time.". In install testing on dev, asking to connect found and started TalentGenius more reliably than asking for the next task.
+- The skill also starts when the person asks to connect to TalentGenius, TG or their playbooks there.
+- The seven tools, the rest of the skill and the MCP connection are unchanged on every host.
+
 ## 1.6.3 - 2026-10-21
 
 - A sign-in tool may be offered whether or not the person is signed in, so the skill no longer reads its presence as "not signed in": it calls the tool when a data tool is refused for want of sign-in or when no data tool is offered at all (a signed-out connection shows only `get_rules` and the sign-in tool), carries on if the tool answers with the account email, and otherwise tells the person to repeat their request once the sign-in is done, because the chat does not continue by itself after the sign-in window closes.
