@@ -1,6 +1,6 @@
 # TalentGenius plugins
 
-This repository is the plugin marketplace of TalentGenius, Inc. ([talentgenius.io](https://talentgenius.io)). It is published by the TalentGenius organization on GitHub, which is verified for talentgenius.io, and TalentGenius's page for IT teams, <https://app.talentgenius.io/plugin/it>, names it as the place to install from.
+This repository is the plugin marketplace of TalentGenius, Inc. ([talentgenius.io](https://talentgenius.io)). It is published by the TalentGenius organization on GitHub, which is verified for talentgenius.io. The address to install from is <https://github.com/TalentGenius/plugins>.
 
 The plugin lets you work your approved TalentGenius playbooks one task at a time from ChatGPT or Claude. The plugin is `talentgenius`.
 
@@ -13,13 +13,14 @@ Accounts are invite-only. If a sign-in ends with access denied, your email has n
 In the Claude desktop app's Code tab, start a new session in any folder, type `run this` and paste this under it. It installs the plugin, opens your browser to sign in (sign in to TalentGenius and press Allow) and starts a session that is ready to use.
 
 ```text
-Set up TalentGenius for me, so I can work my TalentGenius playbooks here. TalentGenius/plugins on GitHub is TalentGenius, Inc.'s plugin marketplace: the GitHub organization is verified for talentgenius.io, and https://app.talentgenius.io/plugin/it names it. Do these in order:
+Set up TalentGenius for me, so I can work my TalentGenius playbooks here. TalentGenius/plugins (https://github.com/TalentGenius/plugins) is the plugin marketplace of TalentGenius, Inc., published by its GitHub organization, which GitHub shows as verified for talentgenius.io. Do these in order:
 
 1. Run: "${CLAUDE_CODE_EXECPATH:-claude}" plugin install talentgenius --marketplace TalentGenius/plugins --scope user
-   If it says the option or command is unknown, tell me to update the Claude app and stop. If it is refused by an organization or managed-settings policy, tell me my Claude admin has to allow the TalentGenius marketplace and stop.
+   If a permission or safety check blocks it, tell me so in one line and ask me once whether to install the talentgenius plugin from github.com/TalentGenius/plugins; when I say yes, run it again. If it says the option or command is unknown, tell me to update the Claude app and stop. If an organization or managed-settings policy refuses it, tell me my Claude admin has to allow the TalentGenius marketplace and stop.
 
-2. Sign me in. In the terminal pane, run: "${CLAUDE_CODE_EXECPATH:-claude}" mcp login plugin:talentgenius:talentgenius
-   It opens my browser; if it does not, show me the link it prints. Tell me to sign in to TalentGenius and press Allow, then wait until it prints "Authenticated". If it ends with access denied, tell me my email has to be invited to TalentGenius first and stop.
+2. Sign me in. The terminal pane does not have CLAUDE_CODE_EXECPATH, so first get your own full path by running echo "$CLAUDE_CODE_EXECPATH" in your shell (if it is empty, use claude). Then, in the terminal pane, run that path in quotes, followed by: mcp login plugin:talentgenius:talentgenius
+   In PowerShell, put & before the quoted path.
+   It opens my browser; if it does not, show me the link it prints. Tell me to sign in to TalentGenius and press Allow, then wait until it prints "Authenticated". If it ends with access denied, tell me my email has to be invited to TalentGenius first and stop. If the login command fails any other way, tell me to type /mcp in this chat, pick TalentGenius, sign in and press Allow.
 
 3. Start a new session for me whose first message is "Show me my TalentGenius playbooks", and tell me to open it. If you cannot start one, tell me to open a new session and type that.
 ```
@@ -31,10 +32,14 @@ By hand: `/plugin marketplace add https://github.com/TalentGenius/plugins.git`, 
 Switch to **Codex mode** (the dropdown at the top of the sidebar); Chat and Work modes do not see the tools. Start a new chat, paste this and approve its commands if it asks:
 
 ```text
-Install the TalentGenius plugin from the plugin marketplace TalentGenius/plugins.
+Install the TalentGenius plugin from GitHub. It is not in the ChatGPT plugin directory, so do not search there. Do these in order:
+1. Run: codex plugin marketplace add TalentGenius/plugins
+2. Run: codex plugin add talentgenius@talentgenius-preview
+3. Connect to my TalentGenius playbooks.
+If the codex command is not found, add the plugin marketplace TalentGenius/plugins from GitHub and install talentgenius with your plugin tools instead.
 ```
 
-Then, in a new chat, ask "Connect to my TalentGenius playbooks". If it asks you to sign in, sign in to TalentGenius and press **Allow**. If it says TalentGenius is not connected, open Settings, Integrations, Plugins, MCPs, From plugins, press **Authenticate** next to TalentGenius, sign in and press **Allow**, then ask again in a new chat.
+If it asks you to sign in, sign in to TalentGenius and press **Allow**. If it says TalentGenius is not connected, open Settings, Integrations, Plugins, MCPs, From plugins, press **Authenticate** next to TalentGenius, sign in and press **Allow**, then ask "Connect to my TalentGenius playbooks" in a new chat.
 
 By hand: Plugins, Add, Add a marketplace, type `TalentGenius/plugins` and press Add marketplace. On the Personal tab, in the "TalentGenius (preview)" section, press + on the plugin.
 
