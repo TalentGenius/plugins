@@ -32,11 +32,10 @@ By hand: `/plugin marketplace add https://github.com/TalentGenius/plugins.git`, 
 Switch to **Codex mode** (the dropdown at the top of the sidebar); Chat and Work modes do not see the tools. Start a new chat, paste this and approve its commands if it asks:
 
 ```text
-Install the TalentGenius plugin from GitHub. It is not in the ChatGPT plugin directory, so do not search there. Do these in order:
-1. Run: codex plugin marketplace add TalentGenius/plugins
-2. Run: codex plugin add talentgenius@talentgenius-preview
+Install the TalentGenius plugin. It is not in the ChatGPT plugin directory, so do not search there. It is in TalentGenius, Inc.'s own plugin marketplace, the GitHub repository TalentGenius/plugins (https://github.com/TalentGenius/plugins). Do these in order:
+1. Add the GitHub repository TalentGenius/plugins as a plugin marketplace.
+2. From that marketplace (named talentgenius-preview), install the plugin named talentgenius.
 3. Connect to my TalentGenius playbooks.
-If the codex command is not found, add the plugin marketplace TalentGenius/plugins from GitHub and install talentgenius with your plugin tools instead.
 ```
 
 If it asks you to sign in, sign in to TalentGenius and press **Allow**. If it says TalentGenius is not connected, open Settings, Integrations, Plugins, MCPs, From plugins, press **Authenticate** next to TalentGenius, sign in and press **Allow**, then ask "Connect to my TalentGenius playbooks" in a new chat.
