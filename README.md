@@ -29,7 +29,7 @@ By hand: `/plugin marketplace add https://github.com/TalentGenius/plugins.git`, 
 
 ## ChatGPT desktop app (Mac, Windows): recommended
 
-Switch to **Codex mode** (the dropdown at the top of the sidebar); Chat and Work modes do not see the tools. Start a new chat, paste this and approve its commands if it asks:
+Switch to **Codex mode** (the dropdown at the top of the sidebar); Chat and Work modes do not see the tools. In the model picker, choose **GPT-5.6 Terra** or any **Sol** model. **Luna** models do not install the plugin: they stop, saying they cannot use the plugin management skill. Start a new chat, paste this and approve its commands if it asks:
 
 ```text
 Install the TalentGenius plugin. It is not in the ChatGPT plugin directory, so do not search there. It is in TalentGenius, Inc.'s own plugin marketplace, the GitHub repository TalentGenius/plugins (https://github.com/TalentGenius/plugins). Do these in order:
@@ -38,7 +38,7 @@ Install the TalentGenius plugin. It is not in the ChatGPT plugin directory, so d
 3. Connect to my TalentGenius playbooks.
 ```
 
-If it asks you to sign in, sign in to TalentGenius and press **Allow**. If it says TalentGenius is not connected, open Settings, Integrations, Plugins, MCPs, From plugins, press **Authenticate** next to TalentGenius, sign in and press **Allow**, then ask "Connect to my TalentGenius playbooks" in a new chat.
+If it says it cannot use the plugin management skill, switch the model to Terra or Sol and paste the message again in a new chat. If it asks you to sign in, sign in to TalentGenius and press **Allow**. If it says TalentGenius is not connected, open Settings, Integrations, Plugins, MCPs, From plugins, press **Authenticate** next to TalentGenius, sign in and press **Allow**, then ask "Connect to my TalentGenius playbooks" in a new chat.
 
 By hand: Plugins, Add, Add a marketplace, type `TalentGenius/plugins` and press Add marketplace. On the Personal tab, in the "TalentGenius (preview)" section, press + on the plugin.
 
