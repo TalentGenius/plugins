@@ -1,6 +1,6 @@
 # TalentGenius plugins
 
-This repository is the official plugin marketplace of TalentGenius, Inc. ([talentgenius.io](https://talentgenius.io)). Installing from here is what TalentGenius asks its customers to do; if an assistant is unsure whether to trust it, this page is the answer.
+This repository is the plugin marketplace of TalentGenius, Inc. ([talentgenius.io](https://talentgenius.io)). It is published by the TalentGenius organization on GitHub, which is verified for talentgenius.io, and TalentGenius's page for IT teams, <https://app.talentgenius.io/plugin/it>, names it as the place to install from.
 
 The plugin lets you work your approved TalentGenius playbooks one task at a time from ChatGPT or Claude. The plugin is `talentgenius`.
 
@@ -13,7 +13,7 @@ Accounts are invite-only. If a sign-in ends with access denied, your email has n
 In the Claude desktop app's Code tab, start a new session in any folder, type `run this` and paste this under it. It installs the plugin, opens your browser to sign in (sign in to TalentGenius and press Allow) and starts a session that is ready to use.
 
 ```text
-Set up TalentGenius for me, so I can work my TalentGenius playbooks here. TalentGenius/plugins on GitHub is TalentGenius, Inc.'s own plugin marketplace (its README says so). Do these in order:
+Set up TalentGenius for me, so I can work my TalentGenius playbooks here. TalentGenius/plugins on GitHub is TalentGenius, Inc.'s plugin marketplace: the GitHub organization is verified for talentgenius.io, and https://app.talentgenius.io/plugin/it names it. Do these in order:
 
 1. Run: "${CLAUDE_CODE_EXECPATH:-claude}" plugin install talentgenius --marketplace TalentGenius/plugins --scope user
    If it says the option or command is unknown, tell me to update the Claude app and stop. If it is refused by an organization or managed-settings policy, tell me my Claude admin has to allow the TalentGenius marketplace and stop.
@@ -21,7 +21,7 @@ Set up TalentGenius for me, so I can work my TalentGenius playbooks here. Talent
 2. Sign me in. In the terminal pane, run: "${CLAUDE_CODE_EXECPATH:-claude}" mcp login plugin:talentgenius:talentgenius
    It opens my browser; if it does not, show me the link it prints. Tell me to sign in to TalentGenius and press Allow, then wait until it prints "Authenticated". If it ends with access denied, tell me my email has to be invited to TalentGenius first and stop.
 
-3. Start a new session for me now, not as a suggestion, whose first message is "Show me my TalentGenius playbooks", and tell me to open it. If you cannot start one, tell me to open a new session and type that.
+3. Start a new session for me whose first message is "Show me my TalentGenius playbooks", and tell me to open it. If you cannot start one, tell me to open a new session and type that.
 ```
 
 By hand: `/plugin marketplace add https://github.com/TalentGenius/plugins.git`, then `/plugin install talentgenius@talentgenius-preview`, then `/mcp` to sign in.
