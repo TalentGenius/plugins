@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.7 - 2026-11-05
+
+- The plugin's manifest links to its source repository and to its README as documentation.
+- Nothing changes in how the plugin works.
+
 ## 1.6.6 - 2026-11-05
 
 - The README gives the one-line install command for Claude Code and three prompts to try.

@@ -1,7 +1,7 @@
 {
 	"name": "talentgenius",
 	"displayName": "TalentGenius",
-	"version": "1.6.6",
+	"version": "1.6.7",
 	"description": "Work your approved TalentGenius playbooks one task at a time, run their AI steps in place, and keep your progress saved.",
 	"author": {
 		"name": "TalentGenius, Inc.",
@@ -9,5 +9,7 @@
 	},
 	"homepage": "https://talentgenius.io",
 	"privacyPolicyUrl": "https://talentgenius.io/legal/privacy-policy",
+	"documentationUrl": "https://github.com/TalentGenius/plugins/blob/main/plugin/talentgenius/README.md",
+	"repository": "https://github.com/TalentGenius/plugins",
 	"keywords": ["talentgenius", "playbook", "tasks", "workflow", "planning"]
 }
